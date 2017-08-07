@@ -1,20 +1,20 @@
 Result 1:
-ID                  workflow-F5XGxj80jy1jpjBB0pppjK1G
+ID                  workflow-F643G300jy1j8fQkPP9GJXYx
 Class               workflow
 Project             project-ByfFPz00jy1fk6PjpZ95F27J
 Folder              /Workflows
-Name                Mokaonc_v1.0
+Name                Mokaonc_v1.1
 State               open
 Visibility          visible
 Types               -
-Properties          github release=v1.0
+Properties          github release=v1.1
 Tags                -
 Outgoing links      -
-Created             Tue Jul 11 14:13:05 2017
+Created             Mon Aug  7 10:42:36 2017
 Created by          amys
-Last modified       Fri Jul 28 10:29:33 2017
-Edit Version        152
-Title               Mokaonc_v1.0
+Last modified       Mon Aug  7 10:45:04 2017
+Edit Version        45
+Title               Mokaonc_v1.1
 Summary             
 Output Folder       -
 Input Spec          stage-F5k1Qyj0jy1VKJb2KYqq7fxG:
@@ -152,5 +152,5 @@ Stage 3             stage-F5k1PB00jy1zxKZ28JX5b41q
 Stage 4             stage-F5XGz980jy1VqPVFBgb75K4g
   Executable        applet-F51688Q0jy1QZ4G99XV16JqX
 Stage 5             stage-F5k1Qyj0jy1VKJb2KYqq7fxG
-  Executable        app-ingenuity_variant_transfer/1.0.4
+  Executable        app-ingenuity_variant_transfer/1.0.5
 temporary           false
