@@ -1,20 +1,20 @@
 Result 1:
-ID                  workflow-FzfpZVj0jy1ZZGfv544Fg01P
+ID                  workflow-G0Fz8K80GfYp1GkQ0QJPkVKG
 Class               workflow
-Project             project-ByfFPz00jy1fk6PjpZ95F27J
-Folder              /Workflows
-Name                Mokaonc_v1.5
+Project             project-G0FykV00GfYYJkF2B35Q27Yb
+Folder              /
+Name                Mokaonc_v1.6
 State               open
 Visibility          visible
 Types               -
 Properties          github release=v1.5
 Tags                -
 Outgoing links      -
-Created             Thu Dec 31 10:39:03 2020
-Created by          aledjones
-Last modified       Thu Dec 31 10:41:14 2020
-Edit Version        15
-Title               Mokaonc_v1.5
+Created             Mon Feb  1 12:29:45 2021
+Created by          graemesmith3
+Last modified       Fri Feb  5 16:36:05 2021
+Edit Version        183
+Title               Mokaonc_v1.6
 Summary             
 Output Folder       -
 Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
@@ -27,8 +27,9 @@ Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
                   "bed_file", "stage":
                   "stage-F5XGzF80jy1y9Q8F2VvvbXkb"}})]
                     [stage-F5XGzG00jy1q5y612VQ9KXxx.ref_genome (file,
-                  default={"$dnanexus_link":
-                  "file-F4g9Y280jy1ZKkq164Vq0FZ9"})]
+                  default={"$dnanexus_link": {"project":
+                  "project-ByfFPz00jy1fk6PjpZ95F27J", "id":
+                  "file-F4g9Y280jy1ZKkq164Vq0FZ9"}})]
                 stage-F5XGzG00jy1q5y612VQ9KXxx: Common:
                     [stage-F5XGzG00jy1q5y612VQ9KXxx.allele_freq (string,
                   default="0.01")]
@@ -48,8 +49,9 @@ Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
                 stage-F7kPz6Q0vpxb0YpjBgQx5f8v:
                     stage-F7kPz6Q0vpxb0YpjBgQx5f8v.fastqs (array:file)
                     [stage-F7kPz6Q0vpxb0YpjBgQx5f8v.ref_genome (file,
-                  default={"$dnanexus_link":
-                  "file-F4g9Y280jy1ZKkq164Vq0FZ9"})]
+                  default={"$dnanexus_link": {"project":
+                  "project-ByfFPz00jy1fk6PjpZ95F27J", "id":
+                  "file-F4g9Y280jy1ZKkq164Vq0FZ9"}})]
                     [stage-F7kPz6Q0vpxb0YpjBgQx5f8v.ampliconflank (file,
                   default={"$dnanexus_link":
                   "file-F5VfXQQ0p3fq52zGG21218zZ"})]
@@ -64,6 +66,20 @@ Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
                   default="master")]
                 stage-F5XGzG00jy1q5y612VQ9KXxx: Advanced:
                     [stage-F5XGzG00jy1q5y612VQ9KXxx.extra_options (string)]
+                stage-G0KYx8Q0GfYvbVg49bYf9p9g:
+                    [stage-G0KYx8Q0GfYvbVg49bYf9p9g.in (array:file,
+                  default=[{"$dnanexus_link":
+                  {"outputField": "vardict_vcf", "stage":
+                  "stage-F5XGzG00jy1q5y612VQ9KXxx"}}])]
+                    [stage-G0KYx8Q0GfYvbVg49bYf9p9g.cmd (string,
+                  default="for vcf in *dict.vcf; do sed -i
+                  \"s/#CHROM/##REFERENCE=hg19\\n#CHROM/\"
+                  $vcf; done; rename
+                  's/.vardict.vcf/.congenica.vardict.vcf/'
+                  *.vcf")]
+                    [stage-G0KYx8Q0GfYvbVg49bYf9p9g.image (string)]
+                    [stage-G0KYx8Q0GfYvbVg49bYf9p9g.mount_inputs (boolean,
+                  default=false)]
                 stage-F5XGzF80jy1y9Q8F2VvvbXkb: Common:
                     [stage-F5XGzF80jy1y9Q8F2VvvbXkb.min_coverage (string,
                   default="10")]
@@ -92,8 +108,9 @@ Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
                   default={"$dnanexus_link":
                   "file-F516ZyQ0jy1vP3P2FZZ3VFpQ"})]
                     [stage-F5XGzF80jy1y9Q8F2VvvbXkb.ref_genome (file,
-                  default={"$dnanexus_link":
-                  "file-F4g9Y280jy1ZKkq164Vq0FZ9"})]
+                  default={"$dnanexus_link": {"project":
+                  "project-ByfFPz00jy1fk6PjpZ95F27J", "id":
+                  "file-F4g9Y280jy1ZKkq164Vq0FZ9"}})]
                 stage-F5XGz980jy1VqPVFBgb75K4g:
                     [stage-F5XGz980jy1VqPVFBgb75K4g.coverage (array:file,
                   default=[{"$dnanexus_link":
@@ -119,12 +136,15 @@ Output Spec         stage-F5XGz980jy1VqPVFBgb75K4g:
                     stage-F5XGzF80jy1y9Q8F2VvvbXkb.varscan_vcf (array:file)
                     [stage-F5XGzF80jy1y9Q8F2VvvbXkb.varscan_vcf_bed
                   (array:file)]
+                stage-G0KYx8Q0GfYvbVg49bYf9p9g:
+                    [stage-G0KYx8Q0GfYvbVg49bYf9p9g.out (array:file)]
 Stage 0             stage-F7kPz6Q0vpxb0YpjBgQx5f8v
   Executable        applet-FGyP95Q0jy1p4J26884ZZG08
 Stage 1             stage-F5XGzF80jy1y9Q8F2VvvbXkb
   Executable        applet-FBGbfPj0jy1Xx53x9jVyPZ7q
 Stage 2             stage-F5XGzG00jy1q5y612VQ9KXxx
-  Executable        applet-FBPyV1j0jy1jB6vV5J559kzG
-Stage 3             stage-F5XGz980jy1VqPVFBgb75K4g
+  Executable        applet-FPzFb180jy1xV5JK6gYyx8gp
+Stage 3             Add_genome_ref_to_vcf (stage-G0KYx8Q0GfYvbVg49bYf9p9g)
+  Executable        app-swiss-army-knife/4.0.1
+Stage 4             stage-F5XGz980jy1VqPVFBgb75K4g
   Executable        applet-FBPyYQ00jy1jK4z62bB6pVBv
-initializedFrom     workflow-FGyxpVj0jy1jbx5z2xjvJGXg
