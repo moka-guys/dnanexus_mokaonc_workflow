@@ -1,5 +1,5 @@
 # dnanexus_mokaonc_workflow_v1.6
 
 ## V1.6
-Added the genome build hg19 to the ouput VCF headers using Swiss Army Knife app.  Vardict vcfsd now go into ./temp_vcf while the output with the build meta data goes into ./congenica_vcf folder.
+Added the genome build hg19 to the ouput VCF headers using Swiss Army Knife app and the shell script Add_ref_to_vcf which is version controlled at https://github.com/moka-guys/Add_ref_build_to_vcf/.  Vardict vcfs go into ./temp_vcf, while the output from vardict with the build reference meta data goes into /amplivar_output/vcf/refheader_vcf/.
 
