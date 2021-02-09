@@ -12,8 +12,8 @@ Tags                -
 Outgoing links      -
 Created             Mon Feb  1 12:29:45 2021
 Created by          graemesmith3
-Last modified       Tue Feb  9 17:06:55 2021
-Edit Version        252
+Last modified       Tue Feb  9 18:38:52 2021
+Edit Version        267
 Title               Mokaonc_v1.6
 Summary             
 Output Folder       -
@@ -47,7 +47,11 @@ Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
                     [stage-F5XGzG00jy1q5y612VQ9KXxx.local_realignment
                   (boolean, default=true)]
                 stage-F7kPz6Q0vpxb0YpjBgQx5f8v:
-                    stage-F7kPz6Q0vpxb0YpjBgQx5f8v.fastqs (array:file)
+                    [stage-F7kPz6Q0vpxb0YpjBgQx5f8v.fastqs (array:file,
+                  default=[{"$dnanexus_link":
+                  "file-G09pFFQ0bG4p4gXQFg7bY1p9"},
+                  {"$dnanexus_link":
+                  "file-G09pFB00bG4p4gXQFg7bY1p7"}])]
                     [stage-F7kPz6Q0vpxb0YpjBgQx5f8v.ref_genome (file,
                   default={"$dnanexus_link": {"project":
                   "project-ByfFPz00jy1fk6PjpZ95F27J", "id":
@@ -72,7 +76,7 @@ Input Spec          stage-F5XGzG00jy1q5y612VQ9KXxx:
                   {"outputField": "vardict_vcf", "stage":
                   "stage-F5XGzG00jy1q5y612VQ9KXxx"}},
                   {"$dnanexus_link":
-                  "file-G0VG2300GfYp9yJ10Z0KpJqv"}])]
+                  "file-G0VGyqQ0GfYYbxYZG6fBvk55"}])]
                     [stage-G0KYx8Q0GfYvbVg49bYf9p9g.cmd (string,
                   default="bash add_ref_build_to_vcf.sh")]
                     [stage-G0KYx8Q0GfYvbVg49bYf9p9g.image (string)]
@@ -146,3 +150,4 @@ Stage 3             Add_genome_ref_to_vcf (stage-G0KYx8Q0GfYvbVg49bYf9p9g)
   Executable        app-swiss-army-knife/4.0.1
 Stage 4             stage-F5XGz980jy1VqPVFBgb75K4g
   Executable        applet-FBPyYQ00jy1jK4z62bB6pVBv
+
