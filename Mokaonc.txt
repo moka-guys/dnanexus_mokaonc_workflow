@@ -1,8 +1,8 @@
 Result 1:
-ID                  workflow-G0Fz8K80GfYp1GkQ0QJPkVKG
+ID                  workflow-G1j21P80jy1zj3bFB5F6q8gV
 Class               workflow
-Project             project-G0FykV00GfYYJkF2B35Q27Yb
-Folder              /
+Project             project-ByfFPz00jy1fk6PjpZ95F27J
+Folder              /Workflows
 Name                Mokaonc_v1.6
 State               open
 Visibility          visible
@@ -10,10 +10,10 @@ Types               -
 Properties          github release=v1.6
 Tags                -
 Outgoing links      -
-Created             Mon Feb  1 12:29:45 2021
+Created             Fri Apr  9 10:39:09 2021
 Created by          graemesmith3
-Last modified       Thu Feb 11 15:52:46 2021
-Edit Version        345
+Last modified       Fri Apr  9 10:39:09 2021
+Edit Version        0
 Title               Mokaonc_v1.6
 Summary             
 Output Folder       -
@@ -140,11 +140,12 @@ Output Spec         stage-F5XGz980jy1VqPVFBgb75K4g:
 Stage 0             stage-F7kPz6Q0vpxb0YpjBgQx5f8v
   Executable        applet-FGyP95Q0jy1p4J26884ZZG08
 Stage 1             stage-F5XGzF80jy1y9Q8F2VvvbXkb
-  Executable        applet-FBGbfPj0jy1Xx53x9jVyPZ7q
+  Executable        applet-G1fvg700jy1YgFFB6yjP3YY1
 Stage 2             stage-F5XGzG00jy1q5y612VQ9KXxx
-  Executable        applet-FPzFb180jy1xV5JK6gYyx8gp
+  Executable        applet-FBPyV1j0jy1jB6vV5J559kzG
 Stage 3             add_ref_build_to_vcf_v1.0.0
                     (stage-G0KYx8Q0GfYvbVg49bYf9p9g)
   Executable        app-swiss-army-knife/4.0.1
 Stage 4             stage-F5XGz980jy1VqPVFBgb75K4g
   Executable        applet-FBPyYQ00jy1jK4z62bB6pVBv
+
